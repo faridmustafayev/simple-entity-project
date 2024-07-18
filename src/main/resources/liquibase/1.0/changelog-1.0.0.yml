@@ -1,0 +1,42 @@
+databaseChangeLog:
+  - changeSet:
+      id: Create accountants table
+      author: Farid Mustafayev
+      changes:
+        - createTable:
+            tableName: accountants
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: first_name
+                  type: varchar(64)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: last_name
+                  type: varchar(64)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: email
+                  type: varchar(128)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: salary
+                  type: numeric(16, 2)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: status
+                  type: varchar(64)
+                  constraints:
+                    nullable: false
+
+            remarks: Table to store information about accountants
